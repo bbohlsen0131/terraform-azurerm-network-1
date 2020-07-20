@@ -19,3 +19,6 @@ resource "azurerm_subnet" "subnet" {
   address_prefixes     = [var.subnet_prefixes[count.index]]
   virtual_network_name = azurerm_virtual_network.vnet.name
 }
+provider "azurerm" {
+  features {}
+}
